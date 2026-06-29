@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TSA Portfolio + Green Site Surveys</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>TSA Portfolio + Site Surveys</h1>
+      <p>Master portfolio overlaid with Smartsheet survey sites filtered to Rank = Green.</p>
+    </div>
+    <div class="actions">
+      <button id="refreshSurveys">Refresh Surveys</button>
+      <input id="search" placeholder="Search address, city, store, notes…" />
+    </div>
+  </header>
+  <main>
+    <section id="map"></section>
+    <aside>
+      <nav>
+        <button class="tab active" data-tab="portfolio">Portfolio</button>
+        <button class="tab" data-tab="surveys">Green Survey Cards</button>
+        <button class="tab" data-tab="deals">Deal View</button>
+      </nav>
+      <section id="portfolio" class="panel active"><div id="portfolioList" class="list"></div></section>
+      <section id="surveys" class="panel"><div id="surveyCards" class="cards"></div></section>
+      <section id="deals" class="panel"><table id="dealTable"><thead></thead><tbody></tbody></table></section>
+    </aside>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
